@@ -1,0 +1,8 @@
+{
+  "name": "ColorsIMIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "d29ae60a"
+}
