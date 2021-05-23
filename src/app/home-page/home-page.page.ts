@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-home-page',
+  templateUrl: './home-page.page.html',
+  styleUrls: ['./home-page.page.scss'],
 })
-export class Tab3Page {
+export class HomePagePage implements OnInit {
 
-  constructor() {}
+  constructor() { }
 
+  ngOnInit() {
+  }
 
+  btnClicked(){
+    console.log("btn Clicked");
+  }
 
-  deleteColor(){
+  testPost(){
     var xHttp = new XMLHttpRequest();
     xHttp.onreadystatechange = function () {
         if (xHttp.readyState == XMLHttpRequest.DONE) {
@@ -25,10 +30,11 @@ export class Tab3Page {
     xHttp.onerror = function () {
         console.log("erooorrr");
     };
-    xHttp.open('DELETE', 'http://127.0.0.1:8000/api/users/delete', true);
+    xHttp.open('POST', 'http://127.0.0.1:8000/api/users', true);
     xHttp.setRequestHeader('Content-Type', 'application/json');
     xHttp.send(JSON.stringify({
-        
+        color: "#FFFF00"
     }));
   }
+  
 }

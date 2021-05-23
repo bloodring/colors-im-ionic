@@ -1,17 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      <ion-img src="../assets/img/Logo.png" class="img"></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <!-- <ion-img src="../assets/img/Logo.png" class="img"></ion-img> -->
+  <ion-content>
+    <ion-list>
+      <ion-card *ngFor="let color of colors$|async">
+        <ion-grid>
+          <ion-row>
+            <ion-col [ngStyle]="{'background-color': color.color}">
+              <ion-card-content>
+                <ion-card-title>{{color.id}}</ion-card-title>
+                <!-- <ion-card-title [ngStyle]="{'background-color': color.color}">.</ion-card-title> -->
+              </ion-card-content>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-list>
+  </ion-content>
+
 </ion-content>
