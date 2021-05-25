@@ -23,7 +23,7 @@ export class HomePagePage implements OnInit {
             if (xHttp.status == 200 || xHttp.status == 201) {
                 console.log("goed verstuurd");
             } else {
-                console.error('Bericht is niet goed verstuurd!');
+                console.error('Er is iets foutgegaan!');
             }
         }
     };

@@ -9,8 +9,6 @@ export class Tab3Page {
 
   constructor() {}
 
-
-
   deleteColor(){
     var xHttp = new XMLHttpRequest();
     xHttp.onreadystatechange = function () {
